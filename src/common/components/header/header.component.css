@@ -1,0 +1,81 @@
+/*----------------Header start------------------*/
+#a-layout-topbar {
+    background-color: #0B3275;
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    height: 70px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9997;
+    color: white;	
+}
+
+.a-topbar-menu {
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+    margin: 0 60px 0 0;
+    padding: 0;
+    height: 100%;
+}
+
+.a-topbar-menu>li>a {
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .2s;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 70px;
+}
+
+.a-menubar {
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    z-index: 9997;
+}
+
+.a-logo {
+    padding: 5px;
+    border-radius: 4px;
+    height: 30px;
+    margin: 14px 5px 14px 60px;
+    background-color: white;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+:host /deep/ .a-menubar .ui-corner-all {
+    border-radius: 0px;
+}
+
+:host /deep/ .a-menubar .ui-widget-content {
+    border: none;
+}
+
+:host /deep/ .a-menubar .ui-menubar-root-list {
+    margin-left: 50px;
+}
+
+.a-topbar-menu li {
+    display: inline;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.a-topbar-menu a {
+    padding: 0 12px;
+}
+
+.a-topbar-menu a:hover {
+    background-color: #007ad9;
+}
+
+/*----------------Header end------------------*/

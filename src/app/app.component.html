@@ -1,0 +1,9 @@
+<app-header [userLoggedIn]="userLoggedIn" (logout)="logout()"></app-header>
+
+<div [ngClass]="{'a-main-container': userLoggedIn, 'a-main-container-logout': !userLoggedIn}"class="a-main-container">
+    <router-outlet></router-outlet>
+</div>
+
+<footer>
+	<span class="footer-copyright">HSBC 2018</span>
+</footer>

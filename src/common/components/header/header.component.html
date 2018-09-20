@@ -1,0 +1,10 @@
+<header *ngIf="userLoggedIn">
+	<div id="a-layout-topbar">
+		<a href="#"><img class="a-logo" src="assets/images/hsbc-logo.svg"></a>
+		<ul class="a-topbar-menu">
+			<li><a>{{userService.username}}</a></li>
+			<li><a (click)="userLogout()">Logout</a></li>
+		</ul>
+	</div>
+	<p-menubar class="a-menubar" [model]="items"></p-menubar>
+</header>

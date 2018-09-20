@@ -1,0 +1,19 @@
+<div class="login-label">
+	<img src="assets/images/hsbc-logo.svg">
+	<div class="login-title">Login</div>
+</div>
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+	<div class="display-block margin-bottom-10 width-100per"><b>Username</b></div>
+	<input formControlName="username" class="display-block margin-bottom-10 width-100per" type="text" pInputText required>
+	<div class="form-error" *ngIf="loginForm.controls['username'].touched && !loginForm.controls['username'].valid">Please Enter Username</div>
+	<label class="display-block margin-bottom-10 width-100per"><b>Password</b></label>
+	<div class="input-password margin-bottom-10">
+		<input formControlName="password" class="display-block width-100per" [type]="passwordType" pInputText required>
+		<span class="password-change-icon">
+			<span *ngIf="!showPassword" class="glyphicon glyphicon-eye-open" (click)="passwordType = 'text';showPassword = true" style="cursor:pointer"></span>
+			<span *ngIf="showPassword" class="glyphicon glyphicon-eye-close" (click)="passwordType = 'password';showPassword = false" style="cursor:pointer"></span>
+		</span>
+	</div>
+	<div class="form-error" *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid">Please Enter Password</div>
+	<button pButton type="submit" label="Login" [disabled]="!loginForm.valid"></button>
+</form>
